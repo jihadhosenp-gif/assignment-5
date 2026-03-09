@@ -1,0 +1,225 @@
+*{    
+margin:0;    
+padding:0;    
+box-sizing:border-box;    
+font-family:Arial, Helvetica, sans-serif;    
+}    
+    
+body{    
+background:#f4f6fb;    
+}      
+    
+.navbar{    
+    display:flex;    
+    justify-content:space-between;    
+    align-items:center;    
+    padding:15px 40px;    
+    background:white;    
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);    
+}    
+.logo img{    
+    width:30px;    
+    height:30px;    
+    margin-right:10px;    
+}    
+.logo{    
+font-size:20px;    
+font-weight:bold;    
+}    
+    
+.nav-right{    
+display:flex;    
+gap:10px;    
+}    
+    
+.nav-right input{    
+    padding:8px 12px;    
+    border:1px solid #ddd;    
+    border-radius:6px;    
+}    
+    
+.search-btn{    
+    background:#2563eb;    
+    color:white;    
+    border:none;    
+    padding:8px 15px;    
+    border-radius:6px;    
+    cursor:pointer;    
+}    
+    
+.filters{    
+    display:flex;    
+    gap:10px;    
+    padding:20px 40px;    
+}    
+    
+.filter-btn{    
+    padding:8px 16px;    
+    border:1px solid #ddd;    
+    background:white;    
+    border-radius:6px;    
+    cursor:pointer;    
+}    
+    
+.filter-btn.active{    
+    background:#2563eb;    
+    color:white;    
+    border-color:#2563eb;    
+}     
+    
+.summary{    
+    
+    margin:0 40px 20px;    
+    background:white;    
+    padding:20px;    
+    border-radius:12px;    
+    display:flex;    
+    justify-content:space-between;    
+    align-items:center;    
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);    
+    
+}    
+    
+.summary-left{    
+    display:flex;    
+    align-items:center;    
+    gap:15px;    
+}    
+    
+.icon{    
+    width:45px;    
+    height:45px;    
+    background:#e8edff;    
+    display:flex;    
+    align-items:center;    
+    justify-content:center;    
+    border-radius:50%;    
+    font-size:20px;    
+    color:#2563eb;    
+}    
+    
+.summary-right{    
+    display:flex;    
+    gap:15px;    
+    font-size:14px;    
+    align-items:center;    
+}    
+    
+.dot{    
+    width:10px;    
+    height:10px;    
+    border-radius:50%;    
+    display:inline-block;    
+    margin-right:5px;    
+}    
+    
+.open-dot{    
+    background:#22c55e;    
+}    
+    
+.closed-dot{    
+    background:#8b5cf6;    
+}        
+    
+.container{    
+    display:grid;    
+    grid-template-columns:repeat(4,2fr);
+    gap:20px;    
+    padding:0 40px 40px;    
+}     
+    
+.card{    
+    background:white;    
+    padding:20px;    
+    border-radius:14px;    
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);    
+    position:relative;    
+    transition:0.3s;    
+    cursor:pointer;    
+}    
+    
+.card:hover{    
+    transform:translateY(-6px);    
+    box-shadow:0 8px 18px rgba(0,0,0,0.1);    
+}        
+    
+.priority{    
+    position:absolute;    
+    top:15px;    
+    right:15px;    
+    padding:5px 10px;    
+    border-radius:20px;    
+    font-size:11px;    
+    font-weight:bold;    
+}    
+    
+.high{    
+    background:#ffe1e1;    
+    color:#c40000;    
+}    
+    
+.medium{    
+    background:#fff1cc;    
+    color:#c78c00;    
+}    
+    
+.low{    
+    background:#e6e6e6;    
+    color:#555;    
+}       
+    
+.card h3{    
+    margin-top:20px;    
+    margin-bottom:10px;    
+    font-size:16px;    
+}    
+    
+.card p{    
+    font-size:13px;    
+    color:#666;    
+    margin-bottom:10px;    
+}       
+    
+.labels span{    
+    padding:4px 10px;    
+    border-radius:15px;    
+    font-size:11px;    
+    margin-right:6px;    
+}    
+    
+.bug{    
+    background:#ffd9d9;    
+    color:#c40000;    
+}    
+    
+.helpwanted{    
+    background:#fff3cd;    
+    color:#b88900;    
+}    
+    
+.enhancement{    
+    background:#d4edda;    
+    color:#1b7a2e;    
+}    
+    
+.documentation{    
+    background:#e2e8f0;    
+    color:#334155;    
+}    
+    
+.goodfirstissue{    
+    background:#e0f2fe;    
+    color:#0369a1;    
+}      
+    
+.meta{    
+    margin-top:12px;    
+    font-size:12px;    
+    color:#777;    
+}    
+    
+.date{    
+    font-size:12px;    
+    color:#999;    
+    margin-top:3px;    
+}    
