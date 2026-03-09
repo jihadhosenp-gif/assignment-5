@@ -1,62 +1,79 @@
-<!DOCTYPE html>    
-<html lang="en">    
-<head>    
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    
-<title>GitHub Issues Tracker</title> 
-<link rel="stylesheet" href="home-style.css">   
-</head>    
-    
-<body>    
-    
-<div class="navbar"> 
-   
-    
-    <div class="logo">
-         <h1><span><img src="assets/github-logo.png" alt="GitHub Logo"></span>GitHub Issues Tracker</h1>
-    </div>    
-    
-    <div class="nav-right">    
-        <input type="text" id="searchInput" placeholder="Search issues...">    
-        <button class="search-btn" onclick="searchIssues()">Search</button>    
-    </div>    
-    
-</div>
-<div class="filters">    
-    
-    <button class="filter-btn active" onclick="setActive(this);filterIssues('all')">All</button>    
-    <button class="filter-btn" onclick="setActive(this);filterIssues('open')">Open</button>    
-    <button class="filter-btn" onclick="setActive(this);filterIssues('closed')">Closed</button>    
-    
-</div>      
-    
-<div class="summary">    
-    
-    <div class="summary-left">    
-    
-        <div class="icon">⚙</div>    
-    
-        <div>    
-            <h3 id="issueCount">0 Issues</h3>    
-            <p>Track and manage your project issues</p>    
-         </div>    
-    
-    </div>    
-    
-    <div class="summary-right">    
-    
-        <span><span class="dot open-dot"></span>Open <span id="openCount">0</span></span>    
-    
-        <span><span class="dot closed-dot"></span>Closed <span id="closedCount">0</span></span>    
-    
-    </div>    
-    
-</div>       
-    
-<div class="container" id="issuesContainer"></div>    
-            
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Issues Tracker</title>
+<link rel="stylesheet" href="home-style.css">
+</head>
+<body>
 
-</body>    
-</html>   
+    <div class="navbar">
+        <div class="logo"><span><img src="assets/github-logo.png" alt=""></span>GitHub Issues Tracker</div>
+
+            <div class="nav-right">
+                <input type="text" id="searchInput" placeholder="Search issues...">
+                <button class="search-btn" onclick="searchIssues()">Search</button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="setActive(this);filterIssues('all')">All</button>
+            <button class="filter-btn" onclick="setActive(this);filterIssues('open')">Open</button>
+            <button class="filter-btn" onclick="setActive(this);filterIssues('closed')">Closed</button>
+        </div>
+
+        <div class="summary">
+
+            <div class="summary-left">
+                <div class="icon">⚙</div>
+
+            <div>
+                <h3 id="issueCount">0 Issues</h3>
+                <p>Track and manage your project issues</p>
+            </div>
+        </div>
+
+        <div class="summary-right">
+            <span><span class="dot open-dot"></span>Open <span id="openCount">0</span></span>
+            <span><span class="dot closed-dot"></span>Closed <span id="closedCount">0</span></span>
+        </div>
+
+    </div>
+
+    <div class="container" id="issuesContainer"></div>
+
+        <div id="issueModal" class="modal">
+            <div class="modal-content">
+
+                <h2 id="modalTitle"></h2>
+
+                <div class="modal-meta">
+                    <span id="modalStatus"></span> •
+                    <span id="modalAuthor"></span> •
+                    <span id="modalDate"></span>
+                </div>
+
+                <div id="modalLabels"></div>
+
+                <p id="modalDescription"></p>
+
+                <div class="modal-bottom">
+                    <div>
+                        <strong>Assignee:</strong>
+                        <span id="modalAssignee"></span>
+                    </div>
+
+                    <div>
+                        <strong>Priority:</strong>
+                        <span id="modalPriority"></span>
+                    </div>
+                </div>
+
+                <button onclick="closeModal()" class="close-btn">Close</button>
+                <script src="java/home-script.js"></script>
+
+            </div>
+        </div>
+    </body>
+</html>
